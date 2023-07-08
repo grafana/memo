@@ -89,6 +89,11 @@ func (s *SlackService) handleMessage(msg *slackevents.MessageEvent) error {
 		return err
 	}
 
+	// message is not for us, but not an error, just bail out
+	if memo == nil {
+		return nil
+	}
+
 	tags := []string{
 		"author:" + usr,
 		"chan:" + ch,
@@ -114,6 +119,7 @@ func New(config cfg.Slack, parser parser.Parser, store store.Store) (service.Ser
 		appToken: config.AppToken,
 
 		parser: parser,
+		store:  store,
 
 		chanIdToNameCache: make(map[string]string),
 		userIdToNameCache: make(map[string]string),

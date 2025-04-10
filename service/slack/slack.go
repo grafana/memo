@@ -70,7 +70,7 @@ func (s *SlackService) userIdToName(id string) string {
 	}
 	u, err := s.api.GetUserInfo(id)
 	if err != nil {
-		log.Errorf("GetUserInfo error: %s (You probably don't have the `users:read` scope)", err.Error())
+		log.Errorf("GetUserInfo error, getting `%s`: %s (You probably don't have the `users:read` scope)", id, err.Error())
 		return "null"
 	}
 	s.userIdToNameCache[id] = u.Name
@@ -159,12 +159,15 @@ func New(config cfg.Slack, parser parser.Parser, store store.Store) (service.Ser
 					continue
 				}
 
+				log.Debugf("Received event: %+v", eventsAPIEvent)
+
 				s.socket.Ack(*evt.Request)
 				switch eventsAPIEvent.Type {
 				case slackevents.CallbackEvent:
 					innerEvent := eventsAPIEvent.InnerEvent
 					switch ev := innerEvent.Data.(type) {
 					case *slackevents.MessageEvent:
+						log.Debugf("Inner event: %+v", ev)
 						s.handleMessage(ev)
 					}
 				}

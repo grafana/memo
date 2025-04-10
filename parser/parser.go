@@ -120,7 +120,7 @@ func (p *Parser) extractTimestamp(words []string) ([]string, time.Time) {
 // New returns a new instance of Parser
 func New() Parser {
 	return Parser{
-		re:    regexp.MustCompile("^memo (.*)"),
+		re:    regexp.MustCompile("^memo(?::)? (.*)"),
 		clock: clock.New(),
 	}
 }

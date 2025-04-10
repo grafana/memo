@@ -69,29 +69,29 @@ But you cannot override any of the default tags
 
 # Installation
 
-## Configure slack (only for memod)
+## Configure Slack (only for memod)
 
-You set up the slack bot as a [bot integration](https://api.slack.com/bot-users).
-Essentially in your slack workspace configuration, you create a bot with the name "memobot" and a token, and specify which channels to join by default.
-Put the token in the memod config file (see below) and it should just work.
-In the future we may look into creating a "real slack app".
-Note that after the bot joins, you can still invite it into - or remove from - any other channel.
-
-![configure slack](./docs/img/memo-slack-config.png)
-
-1. Create an app token
-1. Enable socket mode on your application
+1. Create a [new slack app](https://api.slack.com/apps)
+1. Go to OAuth & Permissions and enable the bot token scopes listed [below](#oauth-scopes-required)
+1. Click "Install App" to then connect it to your workspace and generate an `xoxb-xxxxx` token, which is the `bot_token` in the `[slack]` section
+1. Enable socket mode on your application, which will then generate an `xapp-xxxxx` token, which is the `app_token` in the `[slack]` section
 1. Enable event subscriptions
-1. Subscribe to `message.channels` and `message.im`
-1. Create a bot token (in OAuth and Permissions)
+1. Subscribe to bot events: `message.channels` and `message.im`
 
-### Scopes required for bot token:
+### OAuth scopes required:
 - channels:history
 - channels:read
 - chat:write
 - im:history
 - im:read
 - users:read
+
+## Configure Grafana
+
+1. Log into your Grafana instance, eg https://something.grafana.net
+1. Click into Administration > Users and access > Service accounts
+1. Create a service account with the roles; `Annotations:Writer`, `Annotations:Dashboard annotation writer` & `Annotations:Organization annotation writer`
+1. Add a new service account token and store that in your config.toml under `api_key` in the `[grafana]` section
 
 ## Install the program
 

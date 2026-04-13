@@ -3,7 +3,7 @@ module github.com/grafana/memo
 go 1.14
 
 require (
-	github.com/BurntSushi/toml v0.3.1
+	github.com/BurntSushi/toml v0.4.1
 	github.com/benbjohnson/clock v1.0.3
 	github.com/bwmarrin/discordgo v0.26.1
 	github.com/gorilla/websocket v1.5.0 // indirect

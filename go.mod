@@ -9,8 +9,7 @@ require (
 	github.com/gorilla/websocket v1.5.0 // indirect
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/raintank/dur v0.0.0-20181019115741-955e3a77c6a8
-	github.com/sirupsen/logrus v1.6.0
+	github.com/sirupsen/logrus v1.8.3
 	github.com/slack-go/slack v0.11.3
-	github.com/stretchr/testify v1.4.0 // indirect
 	golang.org/x/sys v0.1.0 // indirect
 )

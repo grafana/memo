@@ -20,8 +20,8 @@ github.com/mitchellh/go-homedir v1.1.0 h1:lukF9ziXFxDFPkA1vsr5zpc1XuPDn/wFntq5mG
 github.com/mitchellh/go-homedir v1.1.0/go.mod h1:SfyaCUpYCn1Vlf4IUYiD9fPX4A5wJrkLzIz1N1q0pr0=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
-github.com/raintank/dur v0.0.0-20181019115741-955e3a77c6a8 h1:NMoWRRKQbUzTETQmWU1RH4TIRHDStAxr3prUgdcQwGk=
-github.com/raintank/dur v0.0.0-20181019115741-955e3a77c6a8/go.mod h1:7BB8LeqBvE3vEKv3ZbgA324vRXhUVO9pT9UrKnYDnx8=
+github.com/raintank/dur v0.0.0-20220106223125-d7c6a541ef3a h1:ic0R3TWw1y25d48s4aS1cVNarVq58zkzVna+ezzaa9o=
+github.com/raintank/dur v0.0.0-20220106223125-d7c6a541ef3a/go.mod h1:7BB8LeqBvE3vEKv3ZbgA324vRXhUVO9pT9UrKnYDnx8=
 github.com/sirupsen/logrus v1.6.0 h1:UBcNElsrwanuuMsnGSlYmtmgbb23qDR5dG+6X6Oo89I=
 github.com/sirupsen/logrus v1.6.0/go.mod h1:7uNnSEd1DgxDLC74fIahvMZmmYsHGZGEOFrfsX/uA88=
 github.com/slack-go/slack v0.11.3 h1:GN7revxEMax4amCc3El9a+9SGnjmBvSUobs0QnO6ZO8=
